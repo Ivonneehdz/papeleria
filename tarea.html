@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Lapicera 🎒</title>
+    <style>
+        #lapices{
+             background-color: rgb(249, 242, 168);
+        }
+        #gomas{
+            background-color: aquamarine;
+        }
+        #colores{
+            background-color: rgb(163, 126, 70);
+        }
+        #lapicera{
+            background-color: #e3b7f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Papelería </h1><br>
+    <h3>Ivonne Estefanía Hernández Pérez</h3>
+    <p>
+        Cardinalidad de conjunto de lapices, gomas y lapices de colores
+   </p> 
+   <input type="number"  value="0" id="cardinalidad1">
+   <button onclick="agregarlapiz(); unionlapiz()">Agregar lapiz</button>
+   <input type="number"  value="0" id="cardinalidad2">
+   <button onclick ="agregargoma(); uniongoma()">Agregar goma</button>
+   <input type="number"  value="0" id="cardinalidad3">
+   <button onclick="agregarcolor(); unioncolor()">Agregar color</button>
+   <h2>Útiles: </h2> <br>
+   <div id="lapices" class="lapiceras"></div>
+  <div id="gomas" class="lapiceras"></div>
+  <div id="colores" class="lapiceras"></div>
+   <h2> Conjunto de Útiles</h2>
+   <input type="number" disabled value="0" id="cardinalidadc">
+   <div id="lapicera" class="lapiceras"></div>
+   <script>
+       let agregarlapiz = () => {
+            let lapices =document.getElementById('lapices')
+            let cardinalidad1 = document.getElementById ('cardinalidad1')
+            let lapiz=document.createElement('lapiz')
+            lapiz.innerText='✏️'
+            lapices.append(lapiz)
+            cardinalidad1.value = lapices.children.length
+       }
+       let unionlapiz= ()=>{
+            let lapicera=document.getElementById('lapicera')
+            let cardinalidad=document.createElement('cardinalidad')
+            cardinalidad.innerText='✏️'
+            lapicera.append(cardinalidad)
+            cardinalidadc.value=lapicera.children.length
+       }
+       let agregargoma = () => {
+            let gomas=document.getElementById('gomas')
+            let cardinalidad2 = document.getElementById ('cardinalidad2')
+            let goma=document.createElement('goma')
+            goma.innerText='📝'
+            gomas.append(goma)
+            cardinalidad2.value=gomas.children.length  
+       }
+       let uniongoma =()=>{
+            let lapicera=document.getElementById('lapicera')
+            let cardinalidad=document.createElement('cardinalidad')
+            cardinalidad.innerText='📝'
+            lapicera.append(cardinalidad)
+            cardinalidadc.value=lapicera.children.length 
+       }
+       let agregarcolor = () => {
+            let colores=document.getElementById('colores')
+            let cardinalidad3 = document.getElementById ('cardinalidad3')
+            let color=document.createElement('color')
+            color.innerText='🖍️'
+            colores.append(color)
+            cardinalidad3.value=colores.children.length
+       }  
+       let unioncolor = () => {
+            let lapicera=document.getElementById('lapicera')
+            let cardinalidad=document.createElement('cardinalidad')
+            cardinalidad.innerText='🖍️'
+            lapicera.append(cardinalidad)
+            cardinalidadc.value=lapicera.children.length    
+       } 
+   </script>
+</body>
+</html>
